@@ -56,7 +56,7 @@ namespace diyetisyenproje
             // 
             // newadres_txt
             // 
-            this.newadres_txt.Location = new System.Drawing.Point(263, 188);
+            this.newadres_txt.Location = new System.Drawing.Point(316, 270);
             this.newadres_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newadres_txt.Multiline = true;
             this.newadres_txt.Name = "newadres_txt";
@@ -65,7 +65,7 @@ namespace diyetisyenproje
             // 
             // newmail_txt
             // 
-            this.newmail_txt.Location = new System.Drawing.Point(263, 165);
+            this.newmail_txt.Location = new System.Drawing.Point(316, 247);
             this.newmail_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newmail_txt.Name = "newmail_txt";
             this.newmail_txt.Size = new System.Drawing.Size(139, 20);
@@ -73,7 +73,7 @@ namespace diyetisyenproje
             // 
             // newsifre_txt
             // 
-            this.newsifre_txt.Location = new System.Drawing.Point(263, 140);
+            this.newsifre_txt.Location = new System.Drawing.Point(316, 222);
             this.newsifre_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newsifre_txt.Name = "newsifre_txt";
             this.newsifre_txt.Size = new System.Drawing.Size(139, 20);
@@ -81,7 +81,7 @@ namespace diyetisyenproje
             // 
             // newnick_txt
             // 
-            this.newnick_txt.Location = new System.Drawing.Point(263, 114);
+            this.newnick_txt.Location = new System.Drawing.Point(316, 196);
             this.newnick_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newnick_txt.Name = "newnick_txt";
             this.newnick_txt.Size = new System.Drawing.Size(139, 20);
@@ -89,7 +89,7 @@ namespace diyetisyenproje
             // 
             // newtel_txt
             // 
-            this.newtel_txt.Location = new System.Drawing.Point(66, 188);
+            this.newtel_txt.Location = new System.Drawing.Point(119, 270);
             this.newtel_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newtel_txt.Name = "newtel_txt";
             this.newtel_txt.Size = new System.Drawing.Size(139, 20);
@@ -97,7 +97,7 @@ namespace diyetisyenproje
             // 
             // newtc_txt
             // 
-            this.newtc_txt.Location = new System.Drawing.Point(66, 165);
+            this.newtc_txt.Location = new System.Drawing.Point(119, 247);
             this.newtc_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newtc_txt.Name = "newtc_txt";
             this.newtc_txt.Size = new System.Drawing.Size(139, 20);
@@ -105,7 +105,7 @@ namespace diyetisyenproje
             // 
             // newsoyad_txt
             // 
-            this.newsoyad_txt.Location = new System.Drawing.Point(66, 140);
+            this.newsoyad_txt.Location = new System.Drawing.Point(119, 222);
             this.newsoyad_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newsoyad_txt.Name = "newsoyad_txt";
             this.newsoyad_txt.Size = new System.Drawing.Size(139, 20);
@@ -115,7 +115,7 @@ namespace diyetisyenproje
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 112);
+            this.label9.Location = new System.Drawing.Point(87, 194);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 25);
@@ -124,7 +124,7 @@ namespace diyetisyenproje
             // 
             // newad_txt
             // 
-            this.newad_txt.Location = new System.Drawing.Point(66, 114);
+            this.newad_txt.Location = new System.Drawing.Point(119, 196);
             this.newad_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newad_txt.Name = "newad_txt";
             this.newad_txt.Size = new System.Drawing.Size(139, 20);
@@ -133,7 +133,7 @@ namespace diyetisyenproje
             // kayittamamla_btn
             // 
             this.kayittamamla_btn.Font = new System.Drawing.Font("Microsoft Uighur", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kayittamamla_btn.Location = new System.Drawing.Point(38, 229);
+            this.kayittamamla_btn.Location = new System.Drawing.Point(91, 311);
             this.kayittamamla_btn.Margin = new System.Windows.Forms.Padding(2);
             this.kayittamamla_btn.Name = "kayittamamla_btn";
             this.kayittamamla_btn.Size = new System.Drawing.Size(202, 33);
@@ -146,7 +146,7 @@ namespace diyetisyenproje
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(214, 186);
+            this.label8.Location = new System.Drawing.Point(267, 268);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 25);
@@ -157,7 +157,7 @@ namespace diyetisyenproje
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(220, 162);
+            this.label7.Location = new System.Drawing.Point(273, 244);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 25);
@@ -168,7 +168,7 @@ namespace diyetisyenproje
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(219, 137);
+            this.label6.Location = new System.Drawing.Point(272, 219);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 25);
@@ -179,7 +179,7 @@ namespace diyetisyenproje
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(214, 112);
+            this.label5.Location = new System.Drawing.Point(267, 194);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 25);
@@ -190,7 +190,7 @@ namespace diyetisyenproje
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 186);
+            this.label4.Location = new System.Drawing.Point(60, 268);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
@@ -201,7 +201,7 @@ namespace diyetisyenproje
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 162);
+            this.label3.Location = new System.Drawing.Point(85, 244);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 25);
@@ -212,7 +212,7 @@ namespace diyetisyenproje
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 137);
+            this.label2.Location = new System.Drawing.Point(71, 219);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 25);
@@ -223,7 +223,7 @@ namespace diyetisyenproje
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(93, 72);
+            this.label10.Location = new System.Drawing.Point(146, 154);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(299, 26);
@@ -234,7 +234,7 @@ namespace diyetisyenproje
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(188, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(241, 82);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 70);
