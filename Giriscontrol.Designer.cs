@@ -32,12 +32,12 @@ namespace diyetisyenproje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(girisekrani));
             this.admin_btn = new System.Windows.Forms.Button();
             this.doctor_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exit_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // admin_btn
             // 
-            this.admin_btn.Location = new System.Drawing.Point(91, 100);
+            this.admin_btn.Location = new System.Drawing.Point(127, 99);
             this.admin_btn.Name = "admin_btn";
             this.admin_btn.Size = new System.Drawing.Size(272, 131);
             this.admin_btn.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace diyetisyenproje
             // 
             // doctor_btn
             // 
-            this.doctor_btn.Location = new System.Drawing.Point(423, 100);
+            this.doctor_btn.Location = new System.Drawing.Point(426, 165);
             this.doctor_btn.Name = "doctor_btn";
             this.doctor_btn.Size = new System.Drawing.Size(272, 131);
             this.doctor_btn.TabIndex = 0;
@@ -55,20 +55,22 @@ namespace diyetisyenproje
             this.doctor_btn.UseVisualStyleBackColor = true;
             this.doctor_btn.Click += new System.EventHandler(this.doctor_btn_Click);
             // 
-            // button1
+            // exit_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(698, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 71);
-            this.button1.TabIndex = 15;
-            this.button1.UseVisualStyleBackColor = false;
+            this.exit_btn.BackColor = System.Drawing.Color.Transparent;
+            this.exit_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit_btn.BackgroundImage")));
+            this.exit_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit_btn.FlatAppearance.BorderSize = 0;
+            this.exit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_btn.Location = new System.Drawing.Point(732, 12);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(56, 48);
+            this.exit_btn.TabIndex = 15;
+            this.exit_btn.UseVisualStyleBackColor = false;
+            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // girisekrani
             // 
@@ -76,12 +78,13 @@ namespace diyetisyenproje
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.doctor_btn);
             this.Controls.Add(this.admin_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "girisekrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.girisekrani_Load);
             this.ResumeLayout(false);
 
         }
@@ -90,7 +93,7 @@ namespace diyetisyenproje
 
         private System.Windows.Forms.Button admin_btn;
         private System.Windows.Forms.Button doctor_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exit_btn;
     }
 }
 

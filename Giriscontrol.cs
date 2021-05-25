@@ -28,5 +28,12 @@ namespace diyetisyenproje
             this.Hide();
             Singleton.Instance.login.Show();
         }
+
+        private void girisekrani_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
     }
 }

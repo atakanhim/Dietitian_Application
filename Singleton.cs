@@ -26,7 +26,7 @@ namespace diyetisyenproje
         }
 
         //Functions
-        public Appli
+        public void ExitTheApplication() => System.Windows.Forms.Application.Exit();// uygullamayı sonlandırıyopr
         // Classes 
         public DataIslemleri islem = new DataIslemleri();
         // Forms

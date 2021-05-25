@@ -21,5 +21,7 @@ namespace diyetisyenproje
         {
 
         }
+
+        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
     }
 }

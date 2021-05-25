@@ -22,8 +22,16 @@ namespace diyetisyenproje
             this.Hide();
             Singleton.Instance.signUp.Show();
         }
+        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
 
         private void login_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        private void back_btn_Click(object sender, EventArgs e)
         {
 
         }

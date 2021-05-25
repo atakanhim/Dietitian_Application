@@ -16,11 +16,12 @@ namespace diyetisyenproje
         {
             InitializeComponent();
         }
-
+        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
         private void kayittamamla_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
             Singleton.Instance.login.Show();
         }
+      
     }
 }
