@@ -16,7 +16,7 @@ namespace diyetisyenproje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new girisekrani());
+            Application.Run(new GirisControl());
         }
     }
 }

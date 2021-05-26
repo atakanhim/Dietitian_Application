@@ -46,42 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminLogin.cs">
+    <Compile Include="Classes\CurrentDiyetisyen.cs" />
+    <Compile Include="Screens\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminLogin.Designer.cs">
+    <Compile Include="Screens\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataIslemleri.cs" />
-    <Compile Include="Giriscontrol.cs">
+    <Compile Include="Screens\AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giriscontrol.Designer.cs">
+    <Compile Include="Screens\AdminScreen.Designer.cs">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataIslemleri.cs" />
+    <Compile Include="Screens\DiyetisyenScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DiyetisyenScreen.Designer.cs">
+      <DependentUpon>DiyetisyenScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Giriscontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Giriscontrol.Designer.cs">
       <DependentUpon>Giriscontrol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Screens\DiyetisyenLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Screens\DiyetisyenLogin.Designer.cs">
+      <DependentUpon>DiyetisyenLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.cs">
+    <Compile Include="Screens\DiyetisyenEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="Screens\DiyetisyenEkle.Designer.cs">
+      <DependentUpon>DiyetisyenEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Singleton.cs" />
-    <EmbeddedResource Include="AdminLogin.resx">
+    <Compile Include="Classes\Singleton.cs" />
+    <EmbeddedResource Include="Screens\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giriscontrol.resx">
+    <EmbeddedResource Include="Screens\AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DiyetisyenScreen.resx">
+      <DependentUpon>DiyetisyenScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Giriscontrol.resx">
       <DependentUpon>Giriscontrol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\DiyetisyenLogin.resx">
+      <DependentUpon>DiyetisyenLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,8 +111,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\DiyetisyenEkle.resx">
+      <DependentUpon>DiyetisyenEkle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
