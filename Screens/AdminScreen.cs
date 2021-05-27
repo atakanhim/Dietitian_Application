@@ -17,16 +17,12 @@ namespace diyetisyenproje
             InitializeComponent();
         }
 
-        private void diyetisyenEkle_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.dEkle.Show();
-        }
+        private void DiyetisyenEkle_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.dEkle);
 
-        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
+        private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
 
 
-        private void back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.aLogin);
+        private void Back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.aLogin);
 
     }
 }

@@ -48,7 +48,7 @@ namespace diyetisyenproje
             this.admingiris_btn.TabIndex = 18;
             this.admingiris_btn.Text = "Giriş";
             this.admingiris_btn.UseVisualStyleBackColor = true;
-            this.admingiris_btn.Click += new System.EventHandler(this.admingiris_btn_Click);
+            this.admingiris_btn.Click += new System.EventHandler(this.Admingiris_btn_Click);
             // 
             // label2
             // 
@@ -100,7 +100,7 @@ namespace diyetisyenproje
             this.exit_btn.Size = new System.Drawing.Size(44, 37);
             this.exit_btn.TabIndex = 22;
             this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // back_btn
             // 
@@ -116,7 +116,7 @@ namespace diyetisyenproje
             this.back_btn.Size = new System.Drawing.Size(44, 37);
             this.back_btn.TabIndex = 21;
             this.back_btn.UseVisualStyleBackColor = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // AdminLogin
             // 

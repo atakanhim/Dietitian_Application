@@ -43,7 +43,7 @@ namespace diyetisyenproje
             this.admin_btn.TabIndex = 0;
             this.admin_btn.Text = "Admin Giris";
             this.admin_btn.UseVisualStyleBackColor = true;
-            this.admin_btn.Click += new System.EventHandler(this.admin_btn_Click);
+            this.admin_btn.Click += new System.EventHandler(this.Admin_btn_Click);
             // 
             // doctor_btn
             // 
@@ -53,7 +53,7 @@ namespace diyetisyenproje
             this.doctor_btn.TabIndex = 0;
             this.doctor_btn.Text = "Diyetisyen Giris";
             this.doctor_btn.UseVisualStyleBackColor = true;
-            this.doctor_btn.Click += new System.EventHandler(this.doctor_btn_Click);
+            this.doctor_btn.Click += new System.EventHandler(this.Doctor_btn_Click);
             // 
             // exit_btn
             // 
@@ -84,7 +84,6 @@ namespace diyetisyenproje
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GirisControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.GirisControl_Load);
             this.ResumeLayout(false);
 
         }

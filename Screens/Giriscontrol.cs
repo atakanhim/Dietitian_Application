@@ -17,25 +17,14 @@ namespace diyetisyenproje
             InitializeComponent();
         }
 
-        private void admin_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.aLogin.Show();
-        }
+        private void Admin_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.aLogin);
 
-        private void doctor_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.dLogin.Show();
-        }
+        private void Doctor_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.dLogin);
 
-     
+
 
         private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
 
-        private void GirisControl_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

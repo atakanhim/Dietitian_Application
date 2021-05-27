@@ -18,9 +18,9 @@ namespace diyetisyenproje
             InitializeComponent();
         }
   
-        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
-        private void back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.girisScreen);
-        private void login_btn_Click(object sender, EventArgs e) => Singleton.Instance.islem.DiyetisyenLoginControl(tc_txt.Text,password_txt.Text,this);
+        private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
+        private void Back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.girisScreen);
+        private void Login_btn_Click(object sender, EventArgs e) => Singleton.Instance.islem.DiyetisyenLoginControl(tc_txt.Text,password_txt.Text,this);
 
 
 

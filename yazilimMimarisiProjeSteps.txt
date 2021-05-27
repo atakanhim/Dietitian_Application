@@ -39,3 +39,5 @@ hazır diyetler eklenecek yada diyetisyene özel diyet oluştur denilecek isters
 
 
 diyetisyen tc ile giris yapacak
+admin usurname ile
+

@@ -50,7 +50,7 @@ namespace diyetisyenproje
             this.login_btn.TabIndex = 12;
             this.login_btn.Text = "Giriş";
             this.login_btn.UseVisualStyleBackColor = true;
-            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
+            this.login_btn.Click += new System.EventHandler(this.Login_btn_Click);
             // 
             // passwordlabel
             // 
@@ -114,7 +114,7 @@ namespace diyetisyenproje
             this.back_btn.Size = new System.Drawing.Size(44, 37);
             this.back_btn.TabIndex = 14;
             this.back_btn.UseVisualStyleBackColor = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // exit_btn
             // 
@@ -130,7 +130,7 @@ namespace diyetisyenproje
             this.exit_btn.Size = new System.Drawing.Size(44, 37);
             this.exit_btn.TabIndex = 20;
             this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // DiyetisyenLogin
             // 

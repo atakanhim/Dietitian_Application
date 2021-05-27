@@ -16,10 +16,10 @@ namespace diyetisyenproje
         {
             InitializeComponent();
         }
+        private void Admingiris_btn_Click(object sender, EventArgs e) =>Singleton.Instance.islem.AdminLoginControl(username_txt.Text, password_txt.Text,this);
+        private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
+        private void Back_btn_Click(object sender, EventArgs e) =>  Singleton.Instance.ChangeScreen(this,Singleton.Instance.girisScreen);
 
-        private void admingiris_btn_Click(object sender, EventArgs e) =>Singleton.Instance.islem.AdminLoginControl(username_txt.Text, password_txt.Text,this);
-        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
-        private void back_btn_Click(object sender, EventArgs e) =>  Singleton.Instance.ChangeScreen(this,Singleton.Instance.girisScreen);
-        
+       
     }
 }

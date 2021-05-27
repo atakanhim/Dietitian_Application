@@ -17,17 +17,48 @@ namespace diyetisyenproje
             InitializeComponent();
         }
 
-        private void back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.dLogin);
-        private void exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
+        private void Back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.dLogin);
+        private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
 
         private void DiyetisyenScreen_Load(object sender, EventArgs e)
         {
-
-            name_label.Text = Singleton.Instance.currentDiyetisyen.DiyetisyenAd;
-            string sorgu = "SELECT * From Sorgu1";
-           dataGridView1.DataSource = Singleton.Instance.islem.GetViewFromDatebase(sorgu);
+            OnLoad();
         }
-       
-        
+        private void OnLoad()
+        {
+            currenttarih.Text = "Tarih :"+DateTime.Now.ToShortDateString();
+            name_label.Text = "Uzm. Diyetisyen " + Singleton.Instance.currentDiyetisyen.Isim.ToUpper() + " " + Singleton.Instance.currentDiyetisyen.Soyisim.ToUpper(); ;
+            hastaTablosu.DataSource = Singleton.Instance.islem.GetViewFromDatebase("SELECT * From showHastalar");// data grid dolduruluyor
+        }
+
+        private void HastaTedaviEt_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void HastaTablosu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+           
+
+
+
+            hastaTablosu.CurrentRow.Selected = true;
+
+            Singleton.Instance.secilenHastabilgileri.SetHastabilgileri(
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaTc"].FormattedValue.ToString(),
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaAd"].FormattedValue.ToString(),
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaSoyad"].FormattedValue.ToString(),
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaTelefon"].FormattedValue.ToString(),
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaHastaligi"].FormattedValue.ToString(),
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaDiyetturu"].FormattedValue.ToString(),
+                DateTime.Parse(hastaTablosu.Rows[e.RowIndex].Cells["hastaKayitTarih"].FormattedValue.ToString()),
+                DateTime.Parse(hastaTablosu.Rows[e.RowIndex].Cells["hastaSonKontrolTarih"].FormattedValue.ToString()),
+                hastaTablosu.Rows[e.RowIndex].Cells["hastaDiyetisyeni"].FormattedValue.ToString()
+                 );    
+            hasta_bilgileri_lbl.Visible = true;
+            hasta_bilgileri_lbl.Text = Singleton.Instance.secilenHastabilgileri.Hastabilgileri;     
+            
+        }
     }
 }

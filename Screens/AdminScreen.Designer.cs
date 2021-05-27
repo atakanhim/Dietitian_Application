@@ -43,7 +43,7 @@ namespace diyetisyenproje
             this.diyetisyenEkle.TabIndex = 0;
             this.diyetisyenEkle.Text = "Diyetisyen Ekle";
             this.diyetisyenEkle.UseVisualStyleBackColor = true;
-            this.diyetisyenEkle.Click += new System.EventHandler(this.diyetisyenEkle_Click);
+            this.diyetisyenEkle.Click += new System.EventHandler(this.DiyetisyenEkle_Click);
             // 
             // back_btn
             // 
@@ -59,7 +59,7 @@ namespace diyetisyenproje
             this.back_btn.Size = new System.Drawing.Size(44, 37);
             this.back_btn.TabIndex = 60;
             this.back_btn.UseVisualStyleBackColor = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // exit_btn
             // 
@@ -75,7 +75,7 @@ namespace diyetisyenproje
             this.exit_btn.Size = new System.Drawing.Size(44, 37);
             this.exit_btn.TabIndex = 61;
             this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // AdminScreen
             // 

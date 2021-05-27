@@ -41,7 +41,7 @@ namespace diyetisyenproje
         // Classes 
         public DataIslemleri islem = new DataIslemleri();
         public CurrentDiyetisyen currentDiyetisyen = new CurrentDiyetisyen();
-
+        public SecilenHastabilgileri secilenHastabilgileri = new SecilenHastabilgileri();
         // Forms
         public GirisControl girisScreen = new GirisControl();
         public DiyetisyenEkle dEkle = new DiyetisyenEkle();
