@@ -63,7 +63,8 @@ namespace diyetisyenproje.Screens
             this.cuma_txt = new System.Windows.Forms.TextBox();
             this.sali_txt = new System.Windows.Forms.TextBox();
             this.diyet_bilgisi = new System.Windows.Forms.Label();
-            this.rapor_olustur = new System.Windows.Forms.Button();
+            this.tedavi_et_btn = new System.Windows.Forms.Button();
+            this.rapor_goruntule_btn = new System.Windows.Forms.Button();
             this.hastalikEkleGrpbox.SuspendLayout();
             this.diyeteklegrpbox.SuspendLayout();
             this.SuspendLayout();
@@ -413,24 +414,35 @@ namespace diyetisyenproje.Screens
             this.diyet_bilgisi.TabIndex = 68;
             this.diyet_bilgisi.Text = "Diyet Bilgisi :";
             // 
-            // rapor_olustur
+            // tedavi_et_btn
             // 
-            this.rapor_olustur.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rapor_olustur.Location = new System.Drawing.Point(651, 604);
-            this.rapor_olustur.Name = "rapor_olustur";
-            this.rapor_olustur.Size = new System.Drawing.Size(366, 66);
-            this.rapor_olustur.TabIndex = 71;
-            this.rapor_olustur.Text = "Rapor Olustur";
-            this.rapor_olustur.UseVisualStyleBackColor = true;
-            this.rapor_olustur.Visible = false;
-            this.rapor_olustur.Click += new System.EventHandler(this.rapor_olustur_Click);
+            this.tedavi_et_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tedavi_et_btn.Location = new System.Drawing.Point(405, 582);
+            this.tedavi_et_btn.Name = "tedavi_et_btn";
+            this.tedavi_et_btn.Size = new System.Drawing.Size(270, 102);
+            this.tedavi_et_btn.TabIndex = 71;
+            this.tedavi_et_btn.Text = "Tedavi Et ";
+            this.tedavi_et_btn.UseVisualStyleBackColor = true;
+            this.tedavi_et_btn.Visible = false;
+            this.tedavi_et_btn.Click += new System.EventHandler(this.Tedavi_et_btn_Click);
+            // 
+            // rapor_goruntule_btn
+            // 
+            this.rapor_goruntule_btn.Location = new System.Drawing.Point(1001, 583);
+            this.rapor_goruntule_btn.Name = "rapor_goruntule_btn";
+            this.rapor_goruntule_btn.Size = new System.Drawing.Size(270, 102);
+            this.rapor_goruntule_btn.TabIndex = 72;
+            this.rapor_goruntule_btn.Text = "Rapor Goruntule";
+            this.rapor_goruntule_btn.UseVisualStyleBackColor = true;
+            this.rapor_goruntule_btn.Visible = false;
             // 
             // HastaTedaviScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 716);
-            this.Controls.Add(this.rapor_olustur);
+            this.Controls.Add(this.rapor_goruntule_btn);
+            this.Controls.Add(this.tedavi_et_btn);
             this.Controls.Add(this.diyetsec_label);
             this.Controls.Add(this.DiyetTuruCombo_combo);
             this.Controls.Add(this.diyeteklegrpbox);
@@ -491,6 +503,7 @@ namespace diyetisyenproje.Screens
         private System.Windows.Forms.Button HastalikEkle_btn;
         private System.Windows.Forms.Button DiyetEkle_btn;
         private System.Windows.Forms.Label diyet_bilgisi;
-        private System.Windows.Forms.Button rapor_olustur;
+        private System.Windows.Forms.Button tedavi_et_btn;
+        private System.Windows.Forms.Button rapor_goruntule_btn;
     }
 }

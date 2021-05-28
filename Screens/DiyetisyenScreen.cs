@@ -24,10 +24,9 @@ namespace diyetisyenproje
         {
             OnLoad();
         }
-        private void OnLoad()
+        public void OnLoad()
         {
-            hasta_bilgileri_lbl.Visible = false;
-       
+            hasta_bilgileri_lbl.Visible = false;    
             currenttarih.Text = "Tarih :"+DateTime.Now.ToShortDateString();
             name_label.Text = "Uzm. Diyetisyen " + Singleton.Instance.currentDiyetisyen.Isim.ToUpper() + " " + Singleton.Instance.currentDiyetisyen.Soyisim.ToUpper(); ;
             hastaTablosu.DataSource = Singleton.Instance.islem.GetViewFromDatebase("SELECT * From showHastalar");// data grid dolduruluyor
@@ -38,7 +37,7 @@ namespace diyetisyenproje
             if (hasta_bilgileri_lbl.Visible == false) MessageBox.Show("Lütfen bir hasta seiniz", "HASTA SEC !!");
             else
             {
-                Singleton.Instance.hastaTedaviScreen.OnLoad();
+                Singleton.Instance.useAllOnLoadFunctions();
                 Singleton.Instance.ChangeScreen(this, Singleton.Instance.hastaTedaviScreen);           
             }
         }

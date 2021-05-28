@@ -37,7 +37,11 @@ namespace diyetisyenproje
             hide.Hide();
             show.Show();
         }
-
+        public void useAllOnLoadFunctions()
+        {
+            this.dScreen.OnLoad();
+            this.hastaTedaviScreen.OnLoad();
+        }
         public void ExitTheApplication() =>Application.Exit();// uygullamayı sonlandırıyopr
         // Classes 
         public DataIslemleri islem = new DataIslemleri();

@@ -47,12 +47,14 @@ namespace diyetisyenproje
             oku = komut.ExecuteReader();
             return oku;
         }
-        private string Ekle(string sorgu)// ExecuteNonquery işlemi burda
+        private string AddOrUpdateDatabase(string sorgu)// ExecuteNonquery işlemi burda
         {
             komut = new OleDbCommand(sorgu, baglanti);
             komut.ExecuteNonQuery();
-            return "Ekleme İşlemi Başarılı";
+
+            return "İşlem Başarılı";
         }
+        
         private string TextBoxGenelControl(string tc, string telefon="" )// text boxtaki verilen dogru girilip girilmedigne bakıyorum
         {
 
@@ -69,6 +71,17 @@ namespace diyetisyenproje
 
 
         // public fonksiyonlar
+        public string HastaTedaviEt()
+        {
+            string mesaj;
+
+            OpenConnection();
+            string sorgu = ("UPDATE hasta set hastaHastaligi='" + Singleton.Instance.secilenHastabilgileri.HastaHastaligi + "',hastaDiyetturu='" + Singleton.Instance.secilenHastabilgileri.HastaDiyetTuru + "',hastaSonKontrolTarih='"+DateTime.Parse(DateTime.Now.ToShortDateString())+"' where hastaTc='" + Singleton.Instance.secilenHastabilgileri.Tc + "'");
+            mesaj= AddOrUpdateDatabase(sorgu);
+            CloseConnection();
+            Singleton.Instance.useAllOnLoadFunctions();
+            return mesaj;
+        }
         public void ComboBoxDoldur(ComboBox comboBox,string sorgu,string key,string TabItem)
         {
             comboBox.Items.Clear();         
@@ -88,11 +101,11 @@ namespace diyetisyenproje
             else if(hastalikadi=="" || aciklama=="")MessageBox.Show("Tüm Alanları doldurunuz .", "Ekleme Baraşarısız !");
             else
             {
-                Ekle("insert into hastaliklar(hastalikAd,hastalikAciklama,hastalikEkleyenDiyetisyen) values('" + hastalikadi + "','"+aciklama+"','"+Singleton.Instance.currentDiyetisyen.Isim+"')");
+                AddOrUpdateDatabase("insert into hastaliklar(hastalikAd,hastalikAciklama,hastalikEkleyenDiyetisyen) values('" + hastalikadi + "','"+aciklama+"','"+Singleton.Instance.currentDiyetisyen.Isim+"')");
                 MessageBox.Show("Hastalık Baraşı ile eklendi .", "Ekleme Başarılşı !");
                 Temizle(currentForm);
                 CloseConnection();
-                Singleton.Instance.hastaTedaviScreen.OnLoad();
+                Singleton.Instance.hastaTedaviScreen.sadeceComboBoxDoldur();
                 return true;
             }                     
             CloseConnection();
@@ -107,12 +120,12 @@ namespace diyetisyenproje
                 MessageBox.Show("Tüm Alanları doldurunuz .", "Ekleme Baraşarısız !");
             else
             {
-                Ekle("insert into diyetler(diyetAd,diyetPazartesi,diyetSali,diyetCarsamba,diyetPersembe,diyetCuma,diyetCumartesi,diyetPazar,diyetEkleyenDiyetisyen)" +
+                AddOrUpdateDatabase("insert into diyetler(diyetAd,diyetPazartesi,diyetSali,diyetCarsamba,diyetPersembe,diyetCuma,diyetCumartesi,diyetPazar,diyetEkleyenDiyetisyen)" +
                     " values('" + diyetAd + "','" + pazartesi + "','" + sali + "','" + carsanba + "','" + persembe + "','" + cuma + "','" + cumartesi + "','" + pazar + "','" + Singleton.Instance.currentDiyetisyen.Isim + "')");
                 MessageBox.Show("Diyet Baraşı ile eklendi .", "Ekleme Başarılşı !");
                 Temizle(currentForm);
                 CloseConnection();
-                Singleton.Instance.hastaTedaviScreen.OnLoad();
+                Singleton.Instance.hastaTedaviScreen.sadeceComboBoxDoldur();
                 return true;
             }
             CloseConnection();
@@ -134,7 +147,7 @@ namespace diyetisyenproje
                 else
                 {
                     string sorgu = "insert into diyetisyen(diyetisyenTc, diyetisyenPassword, diyetisyenAd, diyetisyenSoyad, diyetisyenTelefon, diyetisyenEvAdres,diyetisyenIseBaslamaTarihi) values('" + tc + "','" + password + "','" + ad + "','" + soyad + "','" +"0"+ telefon + "','" + adres + "','" + DateTime.Now.ToShortDateString() + "')";              
-                    MessageBox.Show(Ekle(sorgu), "Üye Olma Başarılı");
+                    MessageBox.Show(AddOrUpdateDatabase(sorgu), "Üye Olma Başarılı");
                     Temizle(currentForm);
                 }
                 CloseConnection();

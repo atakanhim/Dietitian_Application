@@ -8,7 +8,7 @@ namespace diyetisyenproje.Classes
 {
     class SecilenHastabilgileri : Insan
     {
-        public string HastaHastalığı { get; set;}
+        public string HastaHastaligi { get; set;}
         public string HastaDiyetTuru { get; set; }
         public string HastaninDiyetisyeni { get; set; }
         public DateTime HastaKayitTarihi { get; set; }
@@ -26,12 +26,15 @@ namespace diyetisyenproje.Classes
             this.Tc = tc;
             this.Soyisim = soyisim;
             this.Telefon = telefon;
-            this.HastaHastalığı = sikayet;
+            this.HastaHastaligi = sikayet;
             this.HastaDiyetTuru = diyetturu;
             this.HastaKayitTarihi = kayittarih;
             this.HastaSonKontrolTarihi = sontarih;
             this.HastaninDiyetisyeni = hastaninDiyetisyeni;
         }
+        public void ChangeHastaDiyetbilgisi(string newDiyetbilgisi) => this.HastaDiyetTuru = newDiyetbilgisi;// class uzerinde degiştiriyorum ama database e de ayrı olarak ekliyorum
+        public void ChangeHastaHastaligi(string newHastalik) => this.HastaHastaligi = newHastalik;
+        public void ChangeSonKontrolTarihi(DateTime newTarih) => this.HastaSonKontrolTarihi = newTarih;
         public string Hastabilgileri
         {
             get
@@ -40,7 +43,8 @@ namespace diyetisyenproje.Classes
                 "Hasta Tc : " + this.Tc + "\n\n" +
                 "Hasta Adı : " + this.Isim + "\n\n" +
                 "Hasta Soyadı: " + this.Soyisim + "\n\n" +
-                "Hasta Şikayeti : " + this.HastaHastalığı + "\n\n" +
+                "Hasta Telefon Numarası: " + this.Telefon + "\n\n" +
+                "Hasta Şikayeti : " + this.HastaHastaligi + "\n\n" +
                 "Hasta Diyet Türü : " + this.HastaDiyetTuru + "\n\n"+
                 "Hasta Kayıt Tarihi : " + this.HastaKayitTarihi.ToShortDateString() + "\n\n" +
                 "Hasta Son Kontrol Tarihi : " + this.HastaSonKontrolTarihi.ToShortDateString() + "\n\n"+
