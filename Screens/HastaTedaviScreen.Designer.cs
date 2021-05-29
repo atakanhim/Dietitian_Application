@@ -190,7 +190,7 @@ namespace diyetisyenproje.Screens
             this.hastalikAdi_txt.Location = new System.Drawing.Point(80, 85);
             this.hastalikAdi_txt.Multiline = true;
             this.hastalikAdi_txt.Name = "hastalikAdi_txt";
-            this.hastalikAdi_txt.Size = new System.Drawing.Size(128, 20);
+            this.hastalikAdi_txt.Size = new System.Drawing.Size(128, 32);
             this.hastalikAdi_txt.TabIndex = 1;
             // 
             // label3
@@ -435,6 +435,7 @@ namespace diyetisyenproje.Screens
             this.rapor_goruntule_btn.Text = "Rapor Goruntule";
             this.rapor_goruntule_btn.UseVisualStyleBackColor = true;
             this.rapor_goruntule_btn.Visible = false;
+            this.rapor_goruntule_btn.Click += new System.EventHandler(this.rapor_goruntule_btn_Click);
             // 
             // HastaTedaviScreen
             // 

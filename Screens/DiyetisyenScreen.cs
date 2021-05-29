@@ -34,7 +34,7 @@ namespace diyetisyenproje
 
         private void HastaTedaviEt_Click(object sender, EventArgs e)
         {
-            if (hasta_bilgileri_lbl.Visible == false) MessageBox.Show("Lütfen bir hasta seiniz", "HASTA SEC !!");
+            if (hasta_bilgileri_lbl.Visible == false) MessageBox.Show("Lütfen bir hasta seniz", "HASTA SEC !!");
             else
             {
                 Singleton.Instance.useAllOnLoadFunctions();

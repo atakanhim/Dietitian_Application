@@ -95,6 +95,12 @@
     <Compile Include="Screens\HastaTedaviScreen.Designer.cs">
       <DependentUpon>HastaTedaviScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ShowRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ShowRapor.Designer.cs">
+      <DependentUpon>ShowRapor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Screens\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\HastaTedaviScreen.resx">
       <DependentUpon>HastaTedaviScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ShowRapor.resx">
+      <DependentUpon>ShowRapor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

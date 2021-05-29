@@ -120,10 +120,13 @@ namespace diyetisyenproje.Screens
                 MessageBox.Show(Singleton.Instance.islem.HastaTedaviEt());
             }
             else MessageBox.Show("Zaten hastaya bu diyet türü uygulanıyor lütfen başka diyet türü seçiniz");
-          
-
-            
-
         }
+
+        private void rapor_goruntule_btn_Click(object sender, EventArgs e) {
+            Singleton.Instance.useAllOnLoadFunctions();
+            Singleton.Instance.ChangeScreen(this, Singleton.Instance.showRapor);
+            
+        }
+        
     }
 }

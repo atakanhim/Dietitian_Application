@@ -14,3 +14,4 @@ C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.Diyetisyen
 C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.DiyetisyenLogin.resources
 C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.GirisControl.resources
 C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.Screens.HastaTedaviScreen.resources
+C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.Screens.ShowRapor.resources

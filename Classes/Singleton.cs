@@ -30,17 +30,18 @@ namespace diyetisyenproje
         }
 
         //Functions
-      
-
+  
         public void ChangeScreen(Form hide ,Form show)// ekran degistiriyor
         {
             hide.Hide();
             show.Show();
+           
         }
         public void useAllOnLoadFunctions()
         {
             this.dScreen.OnLoad();
             this.hastaTedaviScreen.OnLoad();
+            this.showRapor.OnLoad();
         }
         public void ExitTheApplication() =>Application.Exit();// uygullamayı sonlandırıyopr
         // Classes 
@@ -55,5 +56,6 @@ namespace diyetisyenproje
         public HastaTedaviScreen hastaTedaviScreen = new HastaTedaviScreen();
         public AdminLogin aLogin = new AdminLogin();
         public AdminScreen aScreen = new AdminScreen();
+        public ShowRapor showRapor = new ShowRapor();
     }
 }
