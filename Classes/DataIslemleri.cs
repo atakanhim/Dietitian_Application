@@ -52,7 +52,7 @@ namespace diyetisyenproje
             komut = new OleDbCommand(sorgu, baglanti);
             komut.ExecuteNonQuery();
 
-            return "İşlem Başarılı";
+            return "İşlemi Başarılı";
         }
         
         private string TextBoxGenelControl(string tc, string telefon="" )// text boxtaki verilen dogru girilip girilmedigne bakıyorum
@@ -71,6 +71,29 @@ namespace diyetisyenproje
 
 
         // public fonksiyonlar
+        public string GetVerilenDiyetBilgileri()
+        {
+            string diyetBilgileri = "Diyet Bulunamadı";
+
+            OpenConnection();      
+            OleDbDataReader diyetOku = Read("select * from diyetler where diyetAd='"+ Singleton.Instance.secilenHastabilgileri.HastaDiyetTuru+"'");
+            if (diyetOku.Read())
+            {
+                diyetBilgileri = "       Verilen Diyet Bilgileri ;\n\n" +
+                "Diyet Adı: " + diyetOku["diyetAd"].ToString() + "\n\n" +
+                "Pazartesi : " + diyetOku["diyetPazartesi"].ToString()+ "\n\n" +
+                "Salı : " + diyetOku["diyetSali"].ToString() + "\n\n"+
+                "Çarşamba : " + diyetOku["diyetCarsamba"].ToString() + "\n\n" +
+                "Perşembe : " + diyetOku["diyetPersembe"].ToString() + "\n\n"+
+                "Cuma : " + diyetOku["diyetCuma"].ToString() + "\n\n" +
+                "Cumartesi : " + diyetOku["diyetCumartesi"].ToString() + "\n\n"+
+                "Pazar : " + diyetOku["diyetPazar"].ToString() + "\n\n" +
+                "Veri Tabanına Diyeti Ekleyen Diyetisyen :" + diyetOku["diyetEkleyenDiyetisyen"].ToString() + "\n\n" ;
+            }
+
+            CloseConnection();
+            return diyetBilgileri;
+        }
         public string HastaTedaviEt()
         {
             string mesaj;
@@ -80,7 +103,7 @@ namespace diyetisyenproje
             mesaj= AddOrUpdateDatabase(sorgu);
             CloseConnection();
             Singleton.Instance.useAllOnLoadFunctions();
-            return mesaj;
+            return "Hasta Tedavi "+mesaj;
         }
         public void ComboBoxDoldur(ComboBox comboBox,string sorgu,string key,string TabItem)
         {
@@ -141,13 +164,14 @@ namespace diyetisyenproje
             {
                 OpenConnection();
                 OleDbDataReader oku = Read("select * from diyetisyen where diyetisyenTc='" + tc + "'");
-                if (oku.Read()) MessageBox.Show("Bu tc numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Tc Zaten Kayıtlı !!");
-                OleDbDataReader oku2 = Read("select * from diyetisyen where diyetisyenTelefon='" +"0"+ telefon + "'");
-                if (oku2.Read()) MessageBox.Show("Bu telefon numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Telefon Zaten Kayıtlı !!");
+                OleDbDataReader oku2 = Read("select * from diyetisyen where diyetisyenTelefon='" + "0" + telefon + "'");
+                
+                if (oku.Read()) MessageBox.Show("Bu tc numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Tc Zaten Kayıtlı !!");          
+                else if (oku2.Read()) MessageBox.Show("Bu telefon numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Telefon Zaten Kayıtlı !!");
                 else
                 {
                     string sorgu = "insert into diyetisyen(diyetisyenTc, diyetisyenPassword, diyetisyenAd, diyetisyenSoyad, diyetisyenTelefon, diyetisyenEvAdres,diyetisyenIseBaslamaTarihi) values('" + tc + "','" + password + "','" + ad + "','" + soyad + "','" +"0"+ telefon + "','" + adres + "','" + DateTime.Now.ToShortDateString() + "')";              
-                    MessageBox.Show(AddOrUpdateDatabase(sorgu), "Üye Olma Başarılı");
+                    MessageBox.Show("Üye Olma "+AddOrUpdateDatabase(sorgu), "Üye Olma Başarılı");
                     Temizle(currentForm);
                 }
                 CloseConnection();
@@ -192,7 +216,6 @@ namespace diyetisyenproje
             }
 
         }
-
         public DataTable GetViewFromDatebase(string sorgu)// datatable turunde tabloyu doldurup donduruyoruz
         {
             DataTable tablo = new DataTable();

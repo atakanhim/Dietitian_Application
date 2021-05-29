@@ -12,6 +12,7 @@ namespace diyetisyenproje.Classes
         public string DiyetisyenPassword { get; set; }
         public string DiyetisyenAdres { get; set; }
         public DateTime DiyetisyenIseBaslamaTarihi { get; set; }
+       
         public CurrentDiyetisyen()
         {
 
@@ -24,8 +25,7 @@ namespace diyetisyenproje.Classes
             this.Soyisim = diyeSoyad;
             this.Telefon = diyeTelefon;
             this.DiyetisyenAdres = diyeAdres;
-            this.DiyetisyenIseBaslamaTarihi = tarih;
-          
+            this.DiyetisyenIseBaslamaTarihi = tarih;          
         }
     }
 }
