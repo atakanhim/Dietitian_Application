@@ -37,7 +37,7 @@ namespace diyetisyenproje
             if (hasta_bilgileri_lbl.Visible == false) MessageBox.Show("Lütfen bir hasta seniz", "HASTA SEC !!");
             else
             {
-                Singleton.Instance.useAllOnLoadFunctions();
+                Singleton.Instance.UseAllOnLoadFunctions();
                 Singleton.Instance.ChangeScreen(this, Singleton.Instance.hastaTedaviScreen);           
             }
         }
@@ -62,7 +62,7 @@ namespace diyetisyenproje
                
             }
             hasta_bilgileri_lbl.Visible = true;
-            hasta_bilgileri_lbl.Text = Singleton.Instance.secilenHastabilgileri.Hastabilgileri;
+            hasta_bilgileri_lbl.Text = Singleton.Instance.secilenHastabilgileri.GetHastabilgileriForString();
 
         }
     }

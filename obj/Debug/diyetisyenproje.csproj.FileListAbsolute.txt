@@ -15,3 +15,6 @@ C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.Diyetisyen
 C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.GirisControl.resources
 C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.Screens.HastaTedaviScreen.resources
 C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.Screens.ShowRapor.resources
+C:\Users\ataka\source\repos\diyetisyenproje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ataka\source\repos\diyetisyenproje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ataka\source\repos\diyetisyenproje\obj\Debug\diyetisyenproje.csproj.CopyComplete

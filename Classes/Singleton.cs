@@ -1,8 +1,10 @@
 ﻿using diyetisyenproje.Classes;
 using diyetisyenproje.Screens;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,17 +39,22 @@ namespace diyetisyenproje
             show.Show();
            
         }
-        public void useAllOnLoadFunctions()
+        public void UseAllOnLoadFunctions()
         {
             this.dScreen.OnLoad();
             this.hastaTedaviScreen.OnLoad();
             this.showRapor.OnLoad();
         }
+
+
+        // json çevirme
+     
         public void ExitTheApplication() =>Application.Exit();// uygullamayı sonlandırıyopr
         // Classes 
         public DataIslemleri islem = new DataIslemleri();
         public CurrentDiyetisyen currentDiyetisyen = new CurrentDiyetisyen();
         public SecilenHastabilgileri secilenHastabilgileri = new SecilenHastabilgileri();
+        public JsonParser jsonParser = new JsonParser();
         // Forms
         public GirisControl girisScreen = new GirisControl();
         public DiyetisyenEkle dEkle = new DiyetisyenEkle();
@@ -57,5 +64,6 @@ namespace diyetisyenproje
         public AdminLogin aLogin = new AdminLogin();
         public AdminScreen aScreen = new AdminScreen();
         public ShowRapor showRapor = new ShowRapor();
+       
     }
 }

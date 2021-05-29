@@ -38,7 +38,7 @@ namespace diyetisyenproje.Screens
             this.ikinciBolum_label = new System.Windows.Forms.Label();
             this.ikinciBolumKarar_label = new System.Windows.Forms.Label();
             this.back_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Rapor_donustur = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -133,14 +133,15 @@ namespace diyetisyenproje.Screens
             this.back_btn.UseVisualStyleBackColor = false;
             this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // button1
+            // Rapor_donustur
             // 
-            this.button1.Location = new System.Drawing.Point(77, 695);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 39);
-            this.button1.TabIndex = 67;
-            this.button1.Text = "Dönüştür";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Rapor_donustur.Location = new System.Drawing.Point(77, 695);
+            this.Rapor_donustur.Name = "Rapor_donustur";
+            this.Rapor_donustur.Size = new System.Drawing.Size(144, 39);
+            this.Rapor_donustur.TabIndex = 67;
+            this.Rapor_donustur.Text = "Dönüştür";
+            this.Rapor_donustur.UseVisualStyleBackColor = true;
+            this.Rapor_donustur.Click += new System.EventHandler(this.Rapor_donustur_Click);
             // 
             // button2
             // 
@@ -163,7 +164,7 @@ namespace diyetisyenproje.Screens
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 755);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Rapor_donustur);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.ikinciBolumKarar_label);
             this.Controls.Add(this.ikinciBolum_label);
@@ -192,7 +193,7 @@ namespace diyetisyenproje.Screens
         private System.Windows.Forms.Label ikinciBolum_label;
         private System.Windows.Forms.Label ikinciBolumKarar_label;
         private System.Windows.Forms.Button back_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Rapor_donustur;
         private System.Windows.Forms.Button button2;
     }
 }

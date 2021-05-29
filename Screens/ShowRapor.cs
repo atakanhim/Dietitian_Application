@@ -26,7 +26,7 @@ namespace diyetisyenproje.Screens
         public void OnLoad()
         {
             CombotItemsAdd();
-            unVisibleLabels();
+            UnVisibleLabels();
         }
         private void CombotItemsAdd()
         {
@@ -55,11 +55,11 @@ namespace diyetisyenproje.Screens
 
             }
             else {
-                unVisibleLabels();
+                UnVisibleLabels();
             }
                 
         }
-        private string GetHastaBilgileri() => Singleton.Instance.secilenHastabilgileri.Hastabilgileri;
+        private string GetHastaBilgileri() => Singleton.Instance.secilenHastabilgileri.GetHastabilgileriForString();
         private string GetDiyetBilgileri() => Singleton.Instance.islem.GetVerilenDiyetBilgileri();
 
 
@@ -69,7 +69,7 @@ namespace diyetisyenproje.Screens
             ikinciBolum_label.Visible = true;
             ikinciBolumKarar_label.Visible = true;
         }
-        private void unVisibleLabels()
+        private void UnVisibleLabels()
         {
             ikinciBolum_label.Visible = false;
             birinciBolum_label.Visible = false;
@@ -77,5 +77,11 @@ namespace diyetisyenproje.Screens
         }
 
         private void Back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.hastaTedaviScreen);
+
+        private void Rapor_donustur_Click(object sender, EventArgs e)
+        {
+            // rapor donustürme
+            Singleton.Instance.jsonParser.JsonCevir();
+        }
     }
 }

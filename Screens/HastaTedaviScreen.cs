@@ -36,9 +36,9 @@ namespace diyetisyenproje.Screens
                 rapor_goruntule_btn.Visible = false;//Diyet belirtilmişse rapor görüntülenebilecek
                 tedavi_et_btn.Visible = false;
             }
-            hasta_bilgileri_lbl.Text = Singleton.Instance.secilenHastabilgileri.Hastabilgileri;
+            hasta_bilgileri_lbl.Text = Singleton.Instance.secilenHastabilgileri.GetHastabilgileriForString(); ;
 
-            sadeceComboBoxDoldur();
+            SadeceComboBoxDoldur();
 
             if (Singleton.Instance.secilenHastabilgileri.HastaHastaligi != "Şikayet Belirtilmedi")
             {
@@ -61,7 +61,7 @@ namespace diyetisyenproje.Screens
             hasta_sikayeti.Text = "Hasta şikayeti: " + Singleton.Instance.secilenHastabilgileri.HastaHastaligi;
             diyet_bilgisi.Text= "Diyet Bilgisi : " + Singleton.Instance.secilenHastabilgileri.HastaDiyetTuru;
         }
-        public void sadeceComboBoxDoldur()
+        public void SadeceComboBoxDoldur()
         {
             Singleton.Instance.islem.ComboBoxDoldur(HastaSikayetleri_combo, "SELECT * from hastaliklar", "hastalikAd", "Yeni Hastalik Ekle");
             Singleton.Instance.islem.ComboBoxDoldur(DiyetTuruCombo_combo, "SELECT * from diyetler", "diyetAd", "Yeni Diyet Ekle");
@@ -122,8 +122,8 @@ namespace diyetisyenproje.Screens
             else MessageBox.Show("Zaten hastaya bu diyet türü uygulanıyor lütfen başka diyet türü seçiniz");
         }
 
-        private void rapor_goruntule_btn_Click(object sender, EventArgs e) {
-            Singleton.Instance.useAllOnLoadFunctions();
+        private void Rapor_goruntule_btn_Click(object sender, EventArgs e) {
+            Singleton.Instance.UseAllOnLoadFunctions();
             Singleton.Instance.ChangeScreen(this, Singleton.Instance.showRapor);
             
         }
