@@ -102,7 +102,7 @@ namespace diyetisyenproje
             string sorgu = ("UPDATE hasta set hastaHastaligi='" + Singleton.Instance.secilenHastabilgileri.HastaHastaligi + "',hastaDiyetturu='" + Singleton.Instance.secilenHastabilgileri.HastaDiyetTuru + "',hastaSonKontrolTarih='"+DateTime.Parse(DateTime.Now.ToShortDateString())+"' where hastaTc='" + Singleton.Instance.secilenHastabilgileri.Tc + "'");
             mesaj= AddOrUpdateDatabase(sorgu);
             CloseConnection();
-            Singleton.Instance.useAllOnLoadFunctions();
+            Singleton.Instance.UseAllOnLoadFunctions();
             return "Hasta Tedavi "+mesaj;
         }
         public void ComboBoxDoldur(ComboBox comboBox,string sorgu,string key,string TabItem)
@@ -128,7 +128,7 @@ namespace diyetisyenproje
                 MessageBox.Show("Hastalık Baraşı ile eklendi .", "Ekleme Başarılşı !");
                 Temizle(currentForm);
                 CloseConnection();
-                Singleton.Instance.hastaTedaviScreen.sadeceComboBoxDoldur();
+                Singleton.Instance.hastaTedaviScreen.SadeceComboBoxDoldur();
                 return true;
             }                     
             CloseConnection();
@@ -148,7 +148,7 @@ namespace diyetisyenproje
                 MessageBox.Show("Diyet Baraşı ile eklendi .", "Ekleme Başarılşı !");
                 Temizle(currentForm);
                 CloseConnection();
-                Singleton.Instance.hastaTedaviScreen.sadeceComboBoxDoldur();
+                Singleton.Instance.hastaTedaviScreen.SadeceComboBoxDoldur();
                 return true;
             }
             CloseConnection();

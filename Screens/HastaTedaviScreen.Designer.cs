@@ -435,7 +435,7 @@ namespace diyetisyenproje.Screens
             this.rapor_goruntule_btn.Text = "Rapor Goruntule";
             this.rapor_goruntule_btn.UseVisualStyleBackColor = true;
             this.rapor_goruntule_btn.Visible = false;
-            this.rapor_goruntule_btn.Click += new System.EventHandler(this.rapor_goruntule_btn_Click);
+            this.rapor_goruntule_btn.Click += new System.EventHandler(this.Rapor_goruntule_btn_Click);
             // 
             // HastaTedaviScreen
             // 
