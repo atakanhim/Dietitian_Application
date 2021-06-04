@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC7E387B-F605-430E-AA67-1632FE78DB0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>diyetisyenproje</RootNamespace>
+    <AssemblyName>diyetisyenproje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CurrentDiyetisyen.cs" />
+    <Compile Include="Classes\Insan.cs" />
+    <Compile Include="Classes\SecilenHastabilgileri.cs" />
+    <Compile Include="Screens\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AdminScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AdminScreen.Designer.cs">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataIslemleri.cs" />
+    <Compile Include="Screens\DiyetisyenScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DiyetisyenScreen.Designer.cs">
+      <DependentUpon>DiyetisyenScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Giriscontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Giriscontrol.Designer.cs">
+      <DependentUpon>Giriscontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DiyetisyenLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DiyetisyenLogin.Designer.cs">
+      <DependentUpon>DiyetisyenLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\DiyetisyenEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DiyetisyenEkle.Designer.cs">
+      <DependentUpon>DiyetisyenEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Singleton.cs" />
+    <Compile Include="Screens\HastaTedaviScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\HastaTedaviScreen.Designer.cs">
+      <DependentUpon>HastaTedaviScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\RaporDiyetBilgileri.cs" />
+    <Compile Include="Classes\RaporHastaBilgileri.cs" />
+    <Compile Include="Screens\ShowRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ShowRapor.Designer.cs">
+      <DependentUpon>ShowRapor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Screens\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DiyetisyenScreen.resx">
+      <DependentUpon>DiyetisyenScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Giriscontrol.resx">
+      <DependentUpon>Giriscontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DiyetisyenLogin.resx">
+      <DependentUpon>DiyetisyenLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Screens\DiyetisyenEkle.resx">
+      <DependentUpon>DiyetisyenEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\HastaTedaviScreen.resx">
+      <DependentUpon>HastaTedaviScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ShowRapor.resx">
+      <DependentUpon>ShowRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
