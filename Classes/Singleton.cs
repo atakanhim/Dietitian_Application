@@ -31,7 +31,7 @@ namespace diyetisyenproje
                         instance = new Singleton();
                     }
                 }               
-                     return instance;
+                   return instance;
             }
         }
 

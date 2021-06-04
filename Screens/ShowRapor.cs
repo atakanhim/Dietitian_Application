@@ -88,14 +88,14 @@ namespace diyetisyenproje.Screens
             {
                 string format = "";
                 if (birinciBolum_combo.Text == "Hastanın Kişisel Bilgiler")
-                    format = "Hasta Bilgileri" + Environment.NewLine + JsonConvert.SerializeObject(Singleton.Instance.raporHastaBilgileri) + Environment.NewLine + "Diyet Bilgileri" + Environment.NewLine + JsonConvert.SerializeObject(Singleton.Instance.raporHastaBilgileri);
+                    format = "Hasta Bilgileri" + Environment.NewLine + JsonConvert.SerializeObject(Singleton.Instance.raporHastaBilgileri) + Environment.NewLine + "Diyet Bilgileri" + Environment.NewLine + JsonConvert.SerializeObject(Singleton.Instance.raporDiyetBilgileri);
                 else if (birinciBolum_combo.Text == "Verilen Diyet Bilgileri")
                     format = "Diyet Bilgileri" + Environment.NewLine + JsonConvert.SerializeObject(Singleton.Instance.raporDiyetBilgileri) + Environment.NewLine + "Hasta Bilgileri" + Environment.NewLine + JsonConvert.SerializeObject(Singleton.Instance.raporHastaBilgileri);
                 //dosya olusturuluyor
-                File.WriteAllText(@"kayit.json", format.ToString());
+                File.WriteAllText(@"kayit.html", format.ToString());
                 MessageBox.Show("Json Dosyasi Olusturuldu");
 
-                format = File.ReadAllText(@"kayit.json");
+                format = File.ReadAllText(@"kayit.html");
                 MessageBox.Show(format);
             }
             else
