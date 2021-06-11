@@ -224,15 +224,17 @@ namespace diyetisyenproje
         public void AdminLoginControl(string username, string password,Form currentForm) // admin giris kontrol ediliyor
         {
             OpenConnection();
-
                 OleDbDataReader oku = Read("SELECT * FROM admin where username='"+username+"' AND password='"+password+"'");
-            if (oku.Read()) {
-                Singleton.Instance.aScreen.AdminScreenOnLoad();
-                Singleton.Instance.ChangeScreen(currentForm, Singleton.Instance.aScreen);
-            }              
+                if (oku.Read()) {
+                    CloseConnection();
+                    Temizle(currentForm);
+                    Singleton.Instance.aScreen.AdminScreenOnLoad();
+                    Singleton.Instance.ChangeScreen(currentForm, Singleton.Instance.aScreen);         
+                }              
                 else
-                    MessageBox.Show("Geçersiz Kullanici adi veya şifre.", "Hatalı Giriş");
-                CloseConnection();
+                MessageBox.Show("Geçersiz Kullanici adi veya şifre.", "Hatalı Giriş");
+
+            CloseConnection();
             Temizle(currentForm);
         }
         public void DiyetisyenLoginControl(string tc, string sifre, Form currentForm)// diyetisyen giriş konttrol ediliyor

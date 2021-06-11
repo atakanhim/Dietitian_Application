@@ -56,6 +56,7 @@ namespace diyetisyenproje
             // passwordlabel
             // 
             this.passwordlabel.AutoSize = true;
+            this.passwordlabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordlabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.passwordlabel.Location = new System.Drawing.Point(36, 49);
             this.passwordlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -67,6 +68,7 @@ namespace diyetisyenproje
             // tclabel
             // 
             this.tclabel.AutoSize = true;
+            this.tclabel.BackColor = System.Drawing.Color.Transparent;
             this.tclabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tclabel.Location = new System.Drawing.Point(34, 19);
             this.tclabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
