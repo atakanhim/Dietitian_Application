@@ -20,9 +20,15 @@ namespace diyetisyenproje
         private void DiyetisyenEkle_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.dEkle);
 
         private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
-
-
         private void Back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.aLogin);
 
+        private void AdminScreen_Load(object sender, EventArgs e)
+        {
+            AdminScreenOnLoad();
+        }
+        public void AdminScreenOnLoad()
+        {
+            D_listele_datagridview.DataSource = Singleton.Instance.islem.GetViewFromDatebase("SELECT * From diyetisyen");
+        }
     }
 }

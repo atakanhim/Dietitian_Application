@@ -92,6 +92,12 @@
       <DependentUpon>DiyetisyenEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Singleton.cs" />
+    <Compile Include="Screens\HastaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\HastaEkle.Designer.cs">
+      <DependentUpon>HastaEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\HastaTedaviScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="Screens\DiyetisyenEkle.resx">
       <DependentUpon>DiyetisyenEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\HastaEkle.resx">
+      <DependentUpon>HastaEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\HastaTedaviScreen.resx">
       <DependentUpon>HastaTedaviScreen.cs</DependentUpon>

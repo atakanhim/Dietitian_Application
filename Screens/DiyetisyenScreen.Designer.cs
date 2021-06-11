@@ -46,6 +46,7 @@ namespace diyetisyenproje
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.addNewHasta_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.hastaTablosu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@ namespace diyetisyenproje
             this.hastaTablosu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.hastaTablosu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hastaTablosu.ColumnHeadersVisible = false;
-            this.hastaTablosu.Location = new System.Drawing.Point(24, 137);
+            this.hastaTablosu.Location = new System.Drawing.Point(24, 161);
             this.hastaTablosu.Name = "hastaTablosu";
             this.hastaTablosu.ReadOnly = true;
             this.hastaTablosu.RowHeadersVisible = false;
@@ -272,11 +273,24 @@ namespace diyetisyenproje
             this.textBox8.Text = "Hasta Diyetisyeni";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // addNewHasta_btn
+            // 
+            this.addNewHasta_btn.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addNewHasta_btn.Location = new System.Drawing.Point(24, 536);
+            this.addNewHasta_btn.Name = "addNewHasta_btn";
+            this.addNewHasta_btn.Size = new System.Drawing.Size(263, 58);
+            this.addNewHasta_btn.TabIndex = 76;
+            this.addNewHasta_btn.Text = "Yeni Hasta Ekle";
+            this.addNewHasta_btn.UseVisualStyleBackColor = true;
+            this.addNewHasta_btn.Click += new System.EventHandler(this.AddNewHasta_btn_Click);
+            // 
             // DiyetisyenScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 606);
+            this.Controls.Add(this.addNewHasta_btn);
             this.Controls.Add(this.hastaTedaviEt);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox1);
@@ -322,5 +336,6 @@ namespace diyetisyenproje
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Button addNewHasta_btn;
     }
 }

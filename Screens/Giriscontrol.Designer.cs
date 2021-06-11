@@ -37,9 +37,10 @@ namespace diyetisyenproje
             // 
             // admin_btn
             // 
-            this.admin_btn.Location = new System.Drawing.Point(90, 97);
+            this.admin_btn.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.admin_btn.Location = new System.Drawing.Point(40, 62);
             this.admin_btn.Name = "admin_btn";
-            this.admin_btn.Size = new System.Drawing.Size(272, 131);
+            this.admin_btn.Size = new System.Drawing.Size(272, 70);
             this.admin_btn.TabIndex = 0;
             this.admin_btn.Text = "Admin Giris";
             this.admin_btn.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@ namespace diyetisyenproje
             // 
             // doctor_btn
             // 
-            this.doctor_btn.Location = new System.Drawing.Point(466, 263);
+            this.doctor_btn.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.doctor_btn.Location = new System.Drawing.Point(40, 170);
             this.doctor_btn.Name = "doctor_btn";
-            this.doctor_btn.Size = new System.Drawing.Size(272, 131);
+            this.doctor_btn.Size = new System.Drawing.Size(272, 70);
             this.doctor_btn.TabIndex = 0;
             this.doctor_btn.Text = "Diyetisyen Giris";
             this.doctor_btn.UseVisualStyleBackColor = true;
@@ -65,7 +67,7 @@ namespace diyetisyenproje
             this.exit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_btn.Location = new System.Drawing.Point(732, 12);
+            this.exit_btn.Location = new System.Drawing.Point(505, 12);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(56, 48);
             this.exit_btn.TabIndex = 15;
@@ -76,8 +78,9 @@ namespace diyetisyenproje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(573, 297);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.doctor_btn);
             this.Controls.Add(this.admin_btn);

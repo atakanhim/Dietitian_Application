@@ -1,7 +1,7 @@
 ﻿
-namespace diyetisyenproje
+namespace diyetisyenproje.Screens
 {
-    partial class DiyetisyenEkle
+    partial class HastaEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -29,37 +29,24 @@ namespace diyetisyenproje
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiyetisyenEkle));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HastaEkle));
             this.exit_btn = new System.Windows.Forms.Button();
             this.back_btn = new System.Windows.Forms.Button();
-            this.newadres_txt = new System.Windows.Forms.TextBox();
-            this.newsifre_txt = new System.Windows.Forms.TextBox();
             this.newtel_txt = new System.Windows.Forms.TextBox();
             this.newtc_txt = new System.Windows.Forms.TextBox();
             this.newsoyad_txt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.newad_txt = new System.Windows.Forms.TextBox();
-            this.kayittamamla_btn = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.newHastaligi_txt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.HastaEkle_btn = new System.Windows.Forms.Button();
+            this.diyetisyen_picture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.diyetisyen_picture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(154, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 70);
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
             // 
             // exit_btn
             // 
@@ -70,10 +57,10 @@ namespace diyetisyenproje
             this.exit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_btn.Location = new System.Drawing.Point(378, 12);
+            this.exit_btn.Location = new System.Drawing.Point(504, 12);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(44, 37);
-            this.exit_btn.TabIndex = 59;
+            this.exit_btn.TabIndex = 61;
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
@@ -86,205 +73,193 @@ namespace diyetisyenproje
             this.back_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.back_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back_btn.Location = new System.Drawing.Point(328, 12);
+            this.back_btn.Location = new System.Drawing.Point(454, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(44, 37);
-            this.back_btn.TabIndex = 58;
+            this.back_btn.TabIndex = 60;
             this.back_btn.UseVisualStyleBackColor = false;
             this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // newadres_txt
-            // 
-            this.newadres_txt.Location = new System.Drawing.Point(283, 143);
-            this.newadres_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.newadres_txt.Multiline = true;
-            this.newadres_txt.Name = "newadres_txt";
-            this.newadres_txt.Size = new System.Drawing.Size(139, 89);
-            this.newadres_txt.TabIndex = 72;
-            // 
-            // newsifre_txt
-            // 
-            this.newsifre_txt.Location = new System.Drawing.Point(283, 117);
-            this.newsifre_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.newsifre_txt.Name = "newsifre_txt";
-            this.newsifre_txt.Size = new System.Drawing.Size(139, 20);
-            this.newsifre_txt.TabIndex = 71;
-            // 
             // newtel_txt
             // 
-            this.newtel_txt.Location = new System.Drawing.Point(120, 192);
+            this.newtel_txt.Location = new System.Drawing.Point(107, 104);
             this.newtel_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newtel_txt.MaxLength = 10;
             this.newtel_txt.Name = "newtel_txt";
             this.newtel_txt.Size = new System.Drawing.Size(105, 20);
-            this.newtel_txt.TabIndex = 70;
+            this.newtel_txt.TabIndex = 83;
             // 
             // newtc_txt
             // 
-            this.newtc_txt.Location = new System.Drawing.Point(86, 168);
+            this.newtc_txt.Location = new System.Drawing.Point(73, 80);
             this.newtc_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newtc_txt.MaxLength = 11;
             this.newtc_txt.Name = "newtc_txt";
             this.newtc_txt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.newtc_txt.Size = new System.Drawing.Size(139, 20);
-            this.newtc_txt.TabIndex = 69;
+            this.newtc_txt.TabIndex = 82;
             // 
             // newsoyad_txt
             // 
-            this.newsoyad_txt.Location = new System.Drawing.Point(86, 143);
+            this.newsoyad_txt.Location = new System.Drawing.Point(73, 55);
             this.newsoyad_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newsoyad_txt.Name = "newsoyad_txt";
             this.newsoyad_txt.Size = new System.Drawing.Size(139, 20);
-            this.newsoyad_txt.TabIndex = 68;
+            this.newsoyad_txt.TabIndex = 81;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(54, 115);
+            this.label9.Location = new System.Drawing.Point(41, 27);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 25);
-            this.label9.TabIndex = 67;
+            this.label9.TabIndex = 80;
             this.label9.Text = "Ad:";
             // 
             // newad_txt
             // 
-            this.newad_txt.Location = new System.Drawing.Point(86, 117);
+            this.newad_txt.Location = new System.Drawing.Point(73, 29);
             this.newad_txt.Margin = new System.Windows.Forms.Padding(2);
             this.newad_txt.Name = "newad_txt";
             this.newad_txt.Size = new System.Drawing.Size(139, 20);
-            this.newad_txt.TabIndex = 66;
-            // 
-            // kayittamamla_btn
-            // 
-            this.kayittamamla_btn.Font = new System.Drawing.Font("Microsoft Uighur", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kayittamamla_btn.Location = new System.Drawing.Point(27, 251);
-            this.kayittamamla_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.kayittamamla_btn.Name = "kayittamamla_btn";
-            this.kayittamamla_btn.Size = new System.Drawing.Size(202, 33);
-            this.kayittamamla_btn.TabIndex = 65;
-            this.kayittamamla_btn.Text = "Kaydı Tamamla";
-            this.kayittamamla_btn.UseVisualStyleBackColor = true;
-            this.kayittamamla_btn.Click += new System.EventHandler(this.Kayittamamla_btn_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(233, 143);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 25);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Adres:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(239, 114);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 25);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "Sifre:";
+            this.newad_txt.TabIndex = 79;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 189);
+            this.label4.Location = new System.Drawing.Point(9, 101);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
-            this.label4.TabIndex = 62;
+            this.label4.TabIndex = 76;
             this.label4.Text = "Telefon:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(68, 102);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 25);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "+9 0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 165);
+            this.label3.Location = new System.Drawing.Point(39, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 25);
-            this.label3.TabIndex = 61;
+            this.label3.TabIndex = 75;
             this.label3.Text = "TC:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 140);
+            this.label2.Location = new System.Drawing.Point(25, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 25);
-            this.label2.TabIndex = 60;
+            this.label2.TabIndex = 73;
             this.label2.Text = "Soyad:";
             // 
-            // label1
+            // newHastaligi_txt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 190);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 25);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "+9 0";
+            this.newHastaligi_txt.Location = new System.Drawing.Point(300, 29);
+            this.newHastaligi_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.newHastaligi_txt.Name = "newHastaligi_txt";
+            this.newHastaligi_txt.Size = new System.Drawing.Size(140, 20);
+            this.newHastaligi_txt.TabIndex = 84;
             // 
-            // DiyetisyenEkle
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(234, 27);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 25);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "Hastaligi:";
+            // 
+            // HastaEkle_btn
+            // 
+            this.HastaEkle_btn.Location = new System.Drawing.Point(239, 89);
+            this.HastaEkle_btn.Name = "HastaEkle_btn";
+            this.HastaEkle_btn.Size = new System.Drawing.Size(201, 35);
+            this.HastaEkle_btn.TabIndex = 86;
+            this.HastaEkle_btn.Text = "Hasta Ekle";
+            this.HastaEkle_btn.UseVisualStyleBackColor = true;
+            this.HastaEkle_btn.Click += new System.EventHandler(this.HastaEkle_btn_Click);
+            // 
+            // diyetisyen_picture
+            // 
+            this.diyetisyen_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("diyetisyen_picture.BackgroundImage")));
+            this.diyetisyen_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.diyetisyen_picture.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.diyetisyen_picture.Location = new System.Drawing.Point(0, 179);
+            this.diyetisyen_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.diyetisyen_picture.Name = "diyetisyen_picture";
+            this.diyetisyen_picture.Size = new System.Drawing.Size(560, 280);
+            this.diyetisyen_picture.TabIndex = 87;
+            this.diyetisyen_picture.TabStop = false;
+            // 
+            // HastaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(435, 303);
-            this.Controls.Add(this.newadres_txt);
-            this.Controls.Add(this.newsifre_txt);
+            this.ClientSize = new System.Drawing.Size(560, 459);
+            this.Controls.Add(this.diyetisyen_picture);
+            this.Controls.Add(this.HastaEkle_btn);
+            this.Controls.Add(this.newHastaligi_txt);
             this.Controls.Add(this.newtel_txt);
             this.Controls.Add(this.newtc_txt);
             this.Controls.Add(this.newsoyad_txt);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.newad_txt);
-            this.Controls.Add(this.kayittamamla_btn);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.back_btn);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DiyetisyenEkle";
+            this.Name = "HastaEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "signUp";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "HastaEkle";
+            ((System.ComponentModel.ISupportInitialize)(this.diyetisyen_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.Button back_btn;
-        private System.Windows.Forms.TextBox newadres_txt;
-        private System.Windows.Forms.TextBox newsifre_txt;
         private System.Windows.Forms.TextBox newtel_txt;
         private System.Windows.Forms.TextBox newtc_txt;
         private System.Windows.Forms.TextBox newsoyad_txt;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox newad_txt;
-        private System.Windows.Forms.Button kayittamamla_btn;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox newHastaligi_txt;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button HastaEkle_btn;
+        private System.Windows.Forms.PictureBox diyetisyen_picture;
     }
 }

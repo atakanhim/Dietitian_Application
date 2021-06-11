@@ -93,6 +93,29 @@ namespace diyetisyenproje
         }
 
         // public fonksiyonlar
+        public void HastaEkle(string tc ,string ad, string soyad, string telefon, string Hastaligi, Form currentForm)
+        {
+            string txtcontrol = TextBoxGenelControl(tc, telefon);
+
+            if (tc == "" || ad == "" || soyad == "" || telefon == "" || Hastaligi == "" ) MessageBox.Show("Lütfen Tüm alanları doldurun");
+            else if (txtcontrol != "") MessageBox.Show(txtcontrol, "Hata !!");
+            else
+            {
+                OpenConnection();
+                OleDbDataReader oku = Read("select * from hasta where hastaTc='" + tc + "'");
+                OleDbDataReader oku2 = Read("select * from hasta where hastaTelefon='" + "0" + telefon + "'");
+
+                if (oku.Read()) MessageBox.Show("Bu tc numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Tc Zaten Kayıtlı !!");
+                else if (oku2.Read()) MessageBox.Show("Bu telefon numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Telefon Zaten Kayıtlı !!");
+                else
+                {
+                    string sorgu = "insert into hasta(hastaTc, hastaAd, hastaSoyad, hastaTelefon, hastaHastaligi,hastaDiyetisyeni,hastaKayitTarih,hastaSonKontrolTarih) values('" + tc + "','" + ad + "','" + soyad + "','" + "0" + telefon + "','" + Hastaligi + "','" + Singleton.Instance.currentDiyetisyen.Isim + "','" + DateTime.Now.ToShortDateString() + "','" + DateTime.Now.ToShortDateString() + "')";
+                    MessageBox.Show("Hasta ekleme " + AddOrUpdateDatabase(sorgu), "Hasta Eklendi !!");
+                    Temizle(currentForm);
+                }
+                CloseConnection();
+            }
+        }
         public string GetVerilenDiyetBilgileri()
         {
             string diyetBilgileri = "Diyet Bulunamadı";
@@ -192,7 +215,7 @@ namespace diyetisyenproje
                 else
                 {
                     string sorgu = "insert into diyetisyen(diyetisyenTc, diyetisyenPassword, diyetisyenAd, diyetisyenSoyad, diyetisyenTelefon, diyetisyenEvAdres,diyetisyenIseBaslamaTarihi) values('" + tc + "','" + password + "','" + ad + "','" + soyad + "','" +"0"+ telefon + "','" + adres + "','" + DateTime.Now.ToShortDateString() + "')";              
-                    MessageBox.Show("Üye Olma "+AddOrUpdateDatabase(sorgu), "Üye Olma Başarılı");
+                    MessageBox.Show("Diyetisyen ekleme "+AddOrUpdateDatabase(sorgu), "Diyetisyen Eklendi !!");
                     Temizle(currentForm);
                 }
                 CloseConnection();
@@ -203,8 +226,10 @@ namespace diyetisyenproje
             OpenConnection();
 
                 OleDbDataReader oku = Read("SELECT * FROM admin where username='"+username+"' AND password='"+password+"'");
-                if(oku.Read())
-                    Singleton.Instance.ChangeScreen(currentForm, Singleton.Instance.aScreen);
+            if (oku.Read()) {
+                Singleton.Instance.aScreen.AdminScreenOnLoad();
+                Singleton.Instance.ChangeScreen(currentForm, Singleton.Instance.aScreen);
+            }              
                 else
                     MessageBox.Show("Geçersiz Kullanici adi veya şifre.", "Hatalı Giriş");
                 CloseConnection();
@@ -232,9 +257,8 @@ namespace diyetisyenproje
                 }
                 else
                   MessageBox.Show("Geçersiz Tc numarası veya şifre.", "Hatalı Giriş");
-            
-                CloseConnection();
-               
+      
+                CloseConnection();           
             }
             Temizle(currentForm);
         }

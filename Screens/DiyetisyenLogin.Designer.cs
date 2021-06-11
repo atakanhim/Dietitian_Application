@@ -35,18 +35,19 @@ namespace diyetisyenproje
             this.tclabel = new System.Windows.Forms.Label();
             this.password_txt = new System.Windows.Forms.TextBox();
             this.tc_txt = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.resim1_picture = new System.Windows.Forms.PictureBox();
             this.back_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resim1_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // login_btn
             // 
-            this.login_btn.Location = new System.Drawing.Point(528, 33);
+            this.login_btn.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.login_btn.Location = new System.Drawing.Point(113, 84);
             this.login_btn.Margin = new System.Windows.Forms.Padding(2);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(74, 28);
+            this.login_btn.Size = new System.Drawing.Size(165, 41);
             this.login_btn.TabIndex = 12;
             this.login_btn.Text = "Giriş";
             this.login_btn.UseVisualStyleBackColor = true;
@@ -55,50 +56,53 @@ namespace diyetisyenproje
             // passwordlabel
             // 
             this.passwordlabel.AutoSize = true;
-            this.passwordlabel.Location = new System.Drawing.Point(314, 39);
+            this.passwordlabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.passwordlabel.Location = new System.Drawing.Point(36, 49);
             this.passwordlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.passwordlabel.Name = "passwordlabel";
-            this.passwordlabel.Size = new System.Drawing.Size(34, 13);
+            this.passwordlabel.Size = new System.Drawing.Size(59, 22);
             this.passwordlabel.TabIndex = 11;
             this.passwordlabel.Text = "Şifre :";
             // 
             // tclabel
             // 
             this.tclabel.AutoSize = true;
-            this.tclabel.Location = new System.Drawing.Point(139, 39);
+            this.tclabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tclabel.Location = new System.Drawing.Point(34, 19);
             this.tclabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tclabel.Name = "tclabel";
-            this.tclabel.Size = new System.Drawing.Size(40, 13);
+            this.tclabel.Size = new System.Drawing.Size(61, 22);
             this.tclabel.TabIndex = 10;
             this.tclabel.Text = "Tc No:";
             // 
             // password_txt
             // 
-            this.password_txt.Location = new System.Drawing.Point(352, 36);
+            this.password_txt.Location = new System.Drawing.Point(113, 51);
             this.password_txt.Margin = new System.Windows.Forms.Padding(2);
             this.password_txt.Name = "password_txt";
-            this.password_txt.Size = new System.Drawing.Size(108, 20);
+            this.password_txt.Size = new System.Drawing.Size(165, 20);
             this.password_txt.TabIndex = 9;
             // 
             // tc_txt
             // 
-            this.tc_txt.Location = new System.Drawing.Point(183, 37);
+            this.tc_txt.Location = new System.Drawing.Point(113, 19);
             this.tc_txt.Margin = new System.Windows.Forms.Padding(2);
             this.tc_txt.MaxLength = 11;
             this.tc_txt.Name = "tc_txt";
-            this.tc_txt.Size = new System.Drawing.Size(108, 20);
+            this.tc_txt.Size = new System.Drawing.Size(165, 20);
             this.tc_txt.TabIndex = 8;
             // 
-            // pictureBox1
+            // resim1_picture
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(150, 65);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(452, 336);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.resim1_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("resim1_picture.BackgroundImage")));
+            this.resim1_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.resim1_picture.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.resim1_picture.Location = new System.Drawing.Point(0, 149);
+            this.resim1_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.resim1_picture.Name = "resim1_picture";
+            this.resim1_picture.Size = new System.Drawing.Size(398, 222);
+            this.resim1_picture.TabIndex = 7;
+            this.resim1_picture.TabStop = false;
             // 
             // back_btn
             // 
@@ -109,7 +113,7 @@ namespace diyetisyenproje
             this.back_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.back_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back_btn.Location = new System.Drawing.Point(694, 12);
+            this.back_btn.Location = new System.Drawing.Point(292, 20);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(44, 37);
             this.back_btn.TabIndex = 14;
@@ -125,7 +129,7 @@ namespace diyetisyenproje
             this.exit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_btn.Location = new System.Drawing.Point(744, 12);
+            this.exit_btn.Location = new System.Drawing.Point(342, 20);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(44, 37);
             this.exit_btn.TabIndex = 20;
@@ -136,7 +140,9 @@ namespace diyetisyenproje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(398, 371);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.login_btn);
@@ -144,12 +150,12 @@ namespace diyetisyenproje
             this.Controls.Add(this.tclabel);
             this.Controls.Add(this.password_txt);
             this.Controls.Add(this.tc_txt);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.resim1_picture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DiyetisyenLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resim1_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +167,7 @@ namespace diyetisyenproje
         private System.Windows.Forms.Label tclabel;
         private System.Windows.Forms.TextBox password_txt;
         private System.Windows.Forms.TextBox tc_txt;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox resim1_picture;
         private System.Windows.Forms.Button back_btn;
         private System.Windows.Forms.Button exit_btn;
     }

@@ -27,19 +27,7 @@
             this.Pazar = pazar;
             this.Diyet_Olusturan_Diyetisyen = diyetolsturandiyetisyen;
         }
-
-        /*
-           diyetBilgileri = "       Verilen Diyet Bilgileri ;\n\n" +
-                "Diyet Adı: " + diyetOku["diyetAd"].ToString() + "\n\n" +
-                "Pazartesi : " + diyetOku["diyetPazartesi"].ToString()+ "\n\n" +
-                "Salı : " + diyetOku["diyetSali"].ToString() + "\n\n"+
-                "Çarşamba : " + diyetOku["diyetCarsamba"].ToString() + "\n\n" +
-                "Perşembe : " + diyetOku["diyetPersembe"].ToString() + "\n\n"+
-                "Cuma : " + diyetOku["diyetCuma"].ToString() + "\n\n" +
-                "Cumartesi : " + diyetOku["diyetCumartesi"].ToString() + "\n\n"+
-                "Pazar : " + diyetOku["diyetPazar"].ToString() + "\n\n" +
-                "Veri Tabanına Diyeti Ekleyen Diyetisyen :" + diyetOku["diyetEkleyenDiyetisyen"].ToString() + "\n\n" ;
-        */
+  
     }
 
 }

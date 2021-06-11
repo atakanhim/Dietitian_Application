@@ -40,6 +40,7 @@ namespace diyetisyenproje
                 Singleton.Instance.UseAllOnLoadFunctions();
                 Singleton.Instance.ChangeScreen(this, Singleton.Instance.hastaTedaviScreen);           
             }
+           
         }
 
         private void HastaTablosu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +76,11 @@ namespace diyetisyenproje
             hasta_bilgileri_lbl.Visible = true;
             hasta_bilgileri_lbl.Text = Singleton.Instance.secilenHastabilgileri.GetHastabilgileriForString();
 
+        }
+
+        private void AddNewHasta_btn_Click(object sender, EventArgs e)
+        {
+            Singleton.Instance.ChangeScreen(this, Singleton.Instance.hastaEkle);
         }
     }
 }

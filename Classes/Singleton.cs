@@ -18,8 +18,8 @@ namespace diyetisyenproje
         {
 
         }
-        private static Singleton instance = null;
-        static object _lockobject = new object();
+        private static Singleton instance = null;   
+        static readonly object _lockobject = new object();
         public static Singleton Instance
         {
             get
@@ -34,7 +34,6 @@ namespace diyetisyenproje
                    return instance;
             }
         }
-
         //Functions
   
         public void ChangeScreen(Form hide ,Form show)// ekran degistiriyor
@@ -71,6 +70,7 @@ namespace diyetisyenproje
         public AdminLogin aLogin = new AdminLogin();
         public AdminScreen aScreen = new AdminScreen();
         public ShowRapor showRapor = new ShowRapor();
+        public HastaEkle hastaEkle = new HastaEkle();
        
     }
 }
