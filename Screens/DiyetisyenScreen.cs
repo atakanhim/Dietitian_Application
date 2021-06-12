@@ -29,7 +29,7 @@ namespace diyetisyenproje
             hasta_bilgileri_lbl.Visible = false;    
             currenttarih.Text = "Tarih :"+DateTime.Now.ToShortDateString();
             name_label.Text = "Uzm. Diyetisyen " + Singleton.Instance.currentDiyetisyen.Isim.ToUpper() + " " + Singleton.Instance.currentDiyetisyen.Soyisim.ToUpper(); ;
-            hastaTablosu.DataSource = Singleton.Instance.islem.GetViewFromDatebase("SELECT * From showHastalar");// data grid dolduruluyor
+            hastaTablosu.DataSource = Singleton.Instance.islem.GetViewFromDatebase("SELECT * From showHastalar Where hastaDiyetisyeni='"+Singleton.Instance.currentDiyetisyen.Isim+"' ");// data grid dolduruluyor
         }
 
         private void HastaTedaviEt_Click(object sender, EventArgs e)

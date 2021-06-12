@@ -8,7 +8,6 @@ namespace diyetisyenproje.Classes
 {
     class CurrentDiyetisyen : Insan
     {
-      
         public string DiyetisyenPassword { get; set; }
         public string DiyetisyenAdres { get; set; }
         public DateTime DiyetisyenIseBaslamaTarihi { get; set; }

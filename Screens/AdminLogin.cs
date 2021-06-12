@@ -20,6 +20,9 @@ namespace diyetisyenproje
         private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
         private void Back_btn_Click(object sender, EventArgs e) =>  Singleton.Instance.ChangeScreen(this,Singleton.Instance.girisScreen);
 
-       
+        private void AdminLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

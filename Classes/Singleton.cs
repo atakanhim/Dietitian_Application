@@ -40,7 +40,7 @@ namespace diyetisyenproje
         {
             hide.Hide();
             show.Show();
-           
+
         }
         public void UseAllOnLoadFunctions()
         {
@@ -48,7 +48,6 @@ namespace diyetisyenproje
             this.hastaTedaviScreen.OnLoad();
             this.showRapor.OnLoad();
         }
-
 
         // json çevirme icin objeler olusturuldu duzgun listelensin diye
         public RaporDiyetBilgileri raporDiyetBilgileri = new RaporDiyetBilgileri();

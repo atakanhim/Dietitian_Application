@@ -13,10 +13,6 @@ namespace diyetisyenproje.Classes
         public string HastaninDiyetisyeni { get; set; }
         public DateTime HastaKayitTarihi { get; set; }
         public DateTime HastaSonKontrolTarihi { get; set; }
-        public override string ToString()
-        {
-            return string.Format("Hasta Bilgileri:\n\tHasta Tc: {0},Hasta Adı: {1} ",Tc,Isim);
-        }
         public SecilenHastabilgileri()
         {
            

@@ -38,6 +38,19 @@ namespace diyetisyenproje
                 return false;
             }
         }
+        private string TextBoxGenelControl(string tc, string telefon = "")// text boxtaki verilen dogru girilip girilmedigne bakıyorum
+        {
+
+            if (SayiMi(tc) == false) return "Lütfen geçerli bir tc no girin";
+            else if (Convert.ToInt64(tc) / 10000000000 < 1) return "Geçersiz Tc Kimlik Numarası";
+
+            if (telefon != "")
+            {
+                if (SayiMi(telefon) == false) return "Lütfen geçerli bir deger telefon no girin";
+                else if (Convert.ToInt64(telefon) / 1000000000 < 1) return "Telefon numarası başına 0 koymadan geçerli bir teleon numarası giriniz";
+            }
+            return "";
+        }
         private void OpenConnection() => baglanti.Open();// baglantıyı açtırdık
         private void CloseConnection() => baglanti.Close();// bırdada kapattırıyoruz  2 side tek satır ama böylesi daha iyi
         private OleDbDataReader Read(string sorgu)// executeReader işlemi burda
@@ -55,19 +68,7 @@ namespace diyetisyenproje
             return "İşlemi Başarılı";
         }
         
-        private string TextBoxGenelControl(string tc, string telefon="" )// text boxtaki verilen dogru girilip girilmedigne bakıyorum
-        {
-
-            if (SayiMi(tc) == false) return "Lütfen geçerli bir tc no girin";
-                else if (Convert.ToInt64(tc) / 10000000000 < 1)return "Geçersiz Tc Kimlik Numarası";
-
-            if (telefon != "")
-            {
-                if (SayiMi(telefon) == false) return "Lütfen geçerli bir deger telefon no girin";
-                else if (Convert.ToInt64(telefon) / 1000000000 < 1) return "Telefon numarası başına 0 koymadan geçerli bir teleon numarası giriniz";
-            }
-            return "";
-        }
+      
         //RaporVerilenDiyetBilgileriDoldur
         public void VerilenDiyetBilgileriDoldur()
         {
@@ -88,16 +89,15 @@ namespace diyetisyenproje
                     diyetOku["diyetPazartesi"].ToString()
                     );       
             }
-            CloseConnection();
-           
+            CloseConnection();         
         }
 
         // public fonksiyonlar
-        public void HastaEkle(string tc ,string ad, string soyad, string telefon, string Hastaligi, Form currentForm)
+        public void HastaEkle(string tc ,string ad, string soyad, string telefon ,Form currentForm)
         {
             string txtcontrol = TextBoxGenelControl(tc, telefon);
 
-            if (tc == "" || ad == "" || soyad == "" || telefon == "" || Hastaligi == "" ) MessageBox.Show("Lütfen Tüm alanları doldurun");
+            if (tc == "" || ad == "" || soyad == "" || telefon == ""  ) MessageBox.Show("Lütfen Tüm alanları doldurun");
             else if (txtcontrol != "") MessageBox.Show(txtcontrol, "Hata !!");
             else
             {
@@ -109,7 +109,7 @@ namespace diyetisyenproje
                 else if (oku2.Read()) MessageBox.Show("Bu telefon numarası zaten sistemde kayıtlı \n Lütfen bilgilerinizi kontrol ediniz.", "Telefon Zaten Kayıtlı !!");
                 else
                 {
-                    string sorgu = "insert into hasta(hastaTc, hastaAd, hastaSoyad, hastaTelefon, hastaHastaligi,hastaDiyetisyeni,hastaKayitTarih,hastaSonKontrolTarih) values('" + tc + "','" + ad + "','" + soyad + "','" + "0" + telefon + "','" + Hastaligi + "','" + Singleton.Instance.currentDiyetisyen.Isim + "','" + DateTime.Now.ToShortDateString() + "','" + DateTime.Now.ToShortDateString() + "')";
+                    string sorgu = "insert into hasta(hastaTc, hastaAd, hastaSoyad, hastaTelefon,hastaDiyetisyeni,hastaKayitTarih,hastaSonKontrolTarih) values('" + tc + "','" + ad + "','" + soyad + "','" + "0" + telefon + "','" + Singleton.Instance.currentDiyetisyen.Isim + "','" + DateTime.Now.ToShortDateString() + "','" + DateTime.Now.ToShortDateString() + "')";
                     MessageBox.Show("Hasta ekleme " + AddOrUpdateDatabase(sorgu), "Hasta Eklendi !!");
                     Temizle(currentForm);
                 }

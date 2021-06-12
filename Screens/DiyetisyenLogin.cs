@@ -20,11 +20,7 @@ namespace diyetisyenproje
 
         private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
         private void Back_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.girisScreen);
-        private void Login_btn_Click(object sender, EventArgs e) 
-        {
-            Singleton.Instance.islem.DiyetisyenLoginControl(tc_txt.Text, password_txt.Text, this);
-          
-        } 
+        private void Login_btn_Click(object sender, EventArgs e) => Singleton.Instance.islem.DiyetisyenLoginControl(tc_txt.Text, password_txt.Text, this);
 
 
 

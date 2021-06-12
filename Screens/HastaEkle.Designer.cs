@@ -41,8 +41,6 @@ namespace diyetisyenproje.Screens
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.newHastaligi_txt = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.HastaEkle_btn = new System.Windows.Forms.Button();
             this.diyetisyen_picture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.diyetisyen_picture)).BeginInit();
@@ -175,33 +173,13 @@ namespace diyetisyenproje.Screens
             this.label2.TabIndex = 73;
             this.label2.Text = "Soyad:";
             // 
-            // newHastaligi_txt
-            // 
-            this.newHastaligi_txt.Location = new System.Drawing.Point(300, 29);
-            this.newHastaligi_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.newHastaligi_txt.Name = "newHastaligi_txt";
-            this.newHastaligi_txt.Size = new System.Drawing.Size(140, 20);
-            this.newHastaligi_txt.TabIndex = 84;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(234, 27);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 25);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "Hastaligi:";
-            // 
             // HastaEkle_btn
             // 
-            this.HastaEkle_btn.Location = new System.Drawing.Point(239, 89);
+            this.HastaEkle_btn.Location = new System.Drawing.Point(242, 55);
             this.HastaEkle_btn.Name = "HastaEkle_btn";
             this.HastaEkle_btn.Size = new System.Drawing.Size(201, 35);
             this.HastaEkle_btn.TabIndex = 86;
-            this.HastaEkle_btn.Text = "Hasta Ekle";
+            this.HastaEkle_btn.Text = "Hasta Kaydı Olustur";
             this.HastaEkle_btn.UseVisualStyleBackColor = true;
             this.HastaEkle_btn.Click += new System.EventHandler(this.HastaEkle_btn_Click);
             // 
@@ -210,10 +188,10 @@ namespace diyetisyenproje.Screens
             this.diyetisyen_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("diyetisyen_picture.BackgroundImage")));
             this.diyetisyen_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.diyetisyen_picture.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.diyetisyen_picture.Location = new System.Drawing.Point(0, 179);
+            this.diyetisyen_picture.Location = new System.Drawing.Point(0, 145);
             this.diyetisyen_picture.Margin = new System.Windows.Forms.Padding(2);
             this.diyetisyen_picture.Name = "diyetisyen_picture";
-            this.diyetisyen_picture.Size = new System.Drawing.Size(560, 280);
+            this.diyetisyen_picture.Size = new System.Drawing.Size(560, 314);
             this.diyetisyen_picture.TabIndex = 87;
             this.diyetisyen_picture.TabStop = false;
             // 
@@ -226,11 +204,9 @@ namespace diyetisyenproje.Screens
             this.ClientSize = new System.Drawing.Size(560, 459);
             this.Controls.Add(this.diyetisyen_picture);
             this.Controls.Add(this.HastaEkle_btn);
-            this.Controls.Add(this.newHastaligi_txt);
             this.Controls.Add(this.newtel_txt);
             this.Controls.Add(this.newtc_txt);
             this.Controls.Add(this.newsoyad_txt);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.newad_txt);
             this.Controls.Add(this.label4);
@@ -262,8 +238,6 @@ namespace diyetisyenproje.Screens
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox newHastaligi_txt;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button HastaEkle_btn;
         private System.Windows.Forms.PictureBox diyetisyen_picture;
     }

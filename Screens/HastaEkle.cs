@@ -25,7 +25,7 @@ namespace diyetisyenproje.Screens
 
         private void HastaEkle_btn_Click(object sender, EventArgs e)
         {
-            Singleton.Instance.islem.HastaEkle(newtc_txt.Text,newad_txt.Text,newsoyad_txt.Text,newtel_txt.Text,newHastaligi_txt.Text,this);
+            Singleton.Instance.islem.HastaEkle(newtc_txt.Text,newad_txt.Text,newsoyad_txt.Text,newtel_txt.Text,this);
         }
     }
 }
